@@ -1,0 +1,30 @@
+{
+  "name": "inline-go-struct-tags-syntax-highlight",
+  "displayName": "Inline Go Struct Tags Syntax Highlight",
+  "description": "",
+  "publisher": "fogio",
+  "version": "1.0.0",
+  "license": "MIT",
+  "homepage": "https://github.com/fogio-org/vscode-go-struct-tags-syntax-highlight",
+  "bugs": {
+    "url": "https://github.com/fogio-org/vscode-go-struct-tags-syntax-highlight/issues",
+    "email": "nickitonov@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fogio-org/vscode-go-struct-tags-syntax-highlight.git"
+  },
+  "icon": "assets/img/icon.png",
+  "engines": {
+    "vscode": "^1.21.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "extensionKind": [
+    "ui",
+    "workspace"
+  ],
+  "keywords": [],
+  "contributes": {}
+}
