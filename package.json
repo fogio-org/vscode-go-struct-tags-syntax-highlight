@@ -1,7 +1,7 @@
 {
   "name": "inline-go-struct-tags-syntax-highlight",
   "displayName": "Inline Go Struct Tags Syntax Highlight",
-  "description": "",
+  "description": "Syntax highlighting for Go struct tags",
   "publisher": "fogio",
   "version": "1.0.0",
   "license": "MIT",
@@ -19,12 +19,27 @@
     "vscode": "^1.21.0"
   },
   "categories": [
-    "Themes"
+    "Programming Languages"
   ],
   "extensionKind": [
     "ui",
     "workspace"
   ],
-  "keywords": [],
-  "contributes": {}
+  "keywords": [
+    "go",
+    "golang",
+    "struct",
+    "tags",
+    "syntax",
+    "highlighting"
+  ],
+  "contributes": {
+    "grammars": [
+      {
+        "path": "./syntaxes/go-struct-tags.tmLanguage.json",
+        "scopeName": "source.go.struct-tags",
+        "injectTo": ["source.go"]
+      }
+    ]
+  }
 }

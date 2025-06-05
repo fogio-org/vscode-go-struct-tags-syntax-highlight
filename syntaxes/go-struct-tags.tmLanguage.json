@@ -1,0 +1,16 @@
+{
+  "name": "Go Struct Tags",
+  "scopeName": "source.go.struct-tags",
+  "injectionSelector": "L:source.go",
+  "patterns": [
+    {
+      "name": "meta.struct-tag.pair.go",
+      "match": "(\\w+)(:)(\"[^\"]*\")",
+      "captures": {
+        "1": { "name": "entity.name.tag.go support.type.property-name.json" },
+        "2": { "name": "keyword.operator.go" },
+        "3": { "name": "string.quoted.double.go string.quoted.double.json" }
+      }
+    }
+  ]
+}
