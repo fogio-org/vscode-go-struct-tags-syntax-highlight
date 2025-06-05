@@ -1,63 +1,88 @@
 package examples
 
-// User представляет пример структуры с различными тегами
+// User represents a sample struct with various tags
 type User struct {
-	// Базовые теги
-	ID        int64  `json:"id" xml:"id" db:"user_id"`
-	Name      string `json:"name" xml:"name" db:"user_name"`
-	Email     string `json:"email" xml:"email" db:"user_email"`
-	CreatedAt string `json:"created_at" xml:"created_at" db:"created_at"`
+    // Basic tags
+    ID        int64  `json:"id" xml:"id" db:"user_id"`
+    Name      string `json:"name" xml:"name" db:"user_name"`
+    Email     string `json:"email" xml:"email" db:"user_email"`
+    CreatedAt string `json:"created_at" xml:"created_at" db:"created_at"`
 
-	// Теги с дополнительными опциями
-	Password string `json:"-" xml:"-" db:"password"` // Исключение из JSON/XML
-	Age      int    `json:"age,omitempty" xml:"age,attr" db:"age"`
+    // Tags with additional options
+    Password string `json:"-" xml:"-" db:"password"` // Excluded from JSON/XML
+    Age      int    `json:"age,omitempty" xml:"age,attr" db:"age"`
 
-	// Вложенные структуры
-	Address struct {
-		Street  string `json:"street" xml:"street" db:"street"`
-		City    string `json:"city" xml:"city" db:"city"`
-		Country string `json:"country" xml:"country" db:"country"`
-	} `json:"address" xml:"address" db:"address"`
+    // Embedded struct
+    Address struct {
+        Street  string `json:"street" xml:"street" db:"street"`
+        City    string `json:"city" xml:"city" db:"city"`
+        Country string `json:"country" xml:"country" db:"country"`
+    } `json:"address" xml:"address" db:"address"`
 
-	// Теги валидации
-	PhoneNumber string `validate:"required,len=10" json:"phone" xml:"phone"`
-	Website     string `validate:"url" json:"website" xml:"website"`
+    // Validation tags
+    PhoneNumber string `validate:"required,len=10" json:"phone" xml:"phone"`
+    Website     string `validate:"url" json:"website" xml:"website"`
 
-	// Теги для документации
-	Description string `doc:"Описание пользователя" json:"description" xml:"description"`
+    // Documentation tags
+    Description string `doc:"User description" json:"description" xml:"description"`
 
-	// Теги для сериализации
-	Metadata map[string]interface{} `json:"metadata" xml:"metadata" yaml:"metadata"`
+    // Serialization tags
+    Metadata map[string]interface{} `json:"metadata" xml:"metadata" yaml:"metadata"`
 
-	// Теги с кастомными значениями
-	Status string `json:"status" xml:"status" db:"status" enum:"active,inactive,suspended"`
+    // Tags with custom values
+    Status string `json:"status" xml:"status" db:"status" enum:"active,inactive,suspended"`
 
-	// Теги с пробелами и специальными символами
-	FullName string `json:"full_name" xml:"full-name" db:"full_name" validate:"required,min=2,max=100"`
+    // Tags with spaces and special characters
+    FullName string `json:"full_name" xml:"full-name" db:"full_name" validate:"required,min=2,max=100"`
 }
 
-// Config представляет пример конфигурационной структуры
+// Config represents a sample configuration struct
 type Config struct {
-	// Теги с дефолтными значениями
-	Port     int    `default:"8080" json:"port" yaml:"port"`
-	Host     string `default:"localhost" json:"host" yaml:"host"`
-	LogLevel string `default:"info" json:"log_level" yaml:"logLevel"`
+    // Tags with default values
+    Port     int    `default:"8080" json:"port" yaml:"port"`
+    Host     string `default:"localhost" json:"host" yaml:"host"`
+    LogLevel string `default:"info" json:"log_level" yaml:"logLevel"`
 
-	// Теги с описаниями
-	Timeout int `desc:"Таймаут в секундах" json:"timeout" yaml:"timeout"`
+    // Tags with descriptions
+    Timeout int `desc:"Timeout in seconds" json:"timeout" yaml:"timeout"`
 
-	// Теги с множественными значениями
-	AllowedIPs []string `json:"allowed_ips" yaml:"allowedIPs" validate:"dive,ip"`
+    // Tags with multiple values
+    AllowedIPs []string `json:"allowed_ips" yaml:"allowedIPs" validate:"dive,ip"`
 }
 
-// Response представляет пример структуры ответа API
+// Response represents a sample API response struct
 type Response struct {
-	// Теги для API документации
-	Code    int    `json:"code" example:"200" description:"HTTP статус код"`
-	Message string `json:"message" example:"Success" description:"Сообщение ответа"`
-	Data    any    `json:"data" example:"{}" description:"Данные ответа"`
+    // API documentation tags
+    Code    int    `json:"code" example:"200" description:"HTTP status code"`
+    Message string `json:"message" example:"Success" description:"Response message"`
+    Data    any    `json:"data" example:"{}" description:"Response data"`
 
-	// Теги для метаданных
-	Timestamp string `json:"timestamp" format:"date-time" description:"Время ответа"`
-	Version   string `json:"version" example:"1.0.0" description:"Версия API"`
-} 
+    // Metadata tags
+    Timestamp string `json:"timestamp" format:"date-time" description:"Response time"`
+    Version   string `json:"version" example:"1.0.0" description:"API version"`
+}
+
+// --- Additional test cases for plugin correctness ---
+
+func main() {
+    // Regular string (should NOT be highlighted as struct tag)
+    s1 := "json:\"id\" xml:\"id\" db:\"user_id\""
+    s2 := "just a normal string with `backticks` inside"
+    s3 := "validate:'required' json:'phone'"
+
+    // Raw string (should NOT be highlighted as struct tag)
+    raw := `json:"id" xml:"id" db:"user_id"`
+    raw2 := `this is not a struct tag, just a raw string with : and " inside`
+
+    // Rune (should NOT be highlighted)
+    r := '`'
+    r2 := ':'
+    r3 := '"'
+
+    // Standalone backtick string (should NOT be highlighted)
+    _ = `not a struct tag`
+    _ = `json: "id"` // not a struct tag, just a raw string
+
+    // Print to avoid unused variable errors
+    println(s1, s2, s3, raw, raw2, r, r2, r3)
+}
