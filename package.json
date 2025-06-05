@@ -1,7 +1,7 @@
 {
   "name": "inline-go-struct-tags-syntax-highlight",
   "displayName": "Inline Go Struct Tags Syntax Highlight",
-  "description": "Syntax highlighting for Go struct tags",
+  "description": "Highlight golang struct tags according to your theme",
   "publisher": "fogio",
   "version": "1.0.0",
   "license": "MIT",
@@ -31,7 +31,9 @@
     "struct",
     "tags",
     "syntax",
-    "highlighting"
+    "highlighting",
+    "tag",
+    "inline"
   ],
   "contributes": {
     "grammars": [
