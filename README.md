@@ -13,11 +13,12 @@ Highlight golang struct tags according to your theme
 
 Your theme's default colors
 
-...
+![preview-1](assets/img/preview-1.png)
+![preview-2](assets/img/preview-2.png)
 
 Customization
 
-...
+![preview-3](assets/img/preview-3.png)
 
 ## Install
 
@@ -47,34 +48,7 @@ You can customize the colors for struct tag keys and values using `editor.tokenC
 
 ### Font style
 
-...
-
-```json
-"editor.tokenColorCustomizations": {
-  "textMateRules": [
-    {
-      "scope": "meta.struct-tag.pair.go support.type.property-name.json", // struct tag key
-      "settings": {
-        "fontStyle": "bold"
-      }
-    },
-    {
-      "scope": "meta.struct-tag.pair.go punctuation.separator.dictionary.key-value.json", // struct tag separator (colon)
-      "settings": {
-        "fontStyle": ""
-      }
-    },
-    {
-      "scope": "meta.struct-tag.pair.go string.quoted.double.json", // struct tag value
-      "settings": {
-        "fontStyle": "italic"
-      }
-    }
-  ]
-}
-```
-
-...
+![custom-font-style](assets/img/custom-font-style.png)
 
 ```json
 "editor.tokenColorCustomizations": {
@@ -94,7 +68,7 @@ You can customize the colors for struct tag keys and values using `editor.tokenC
     {
       "scope": "meta.struct-tag.pair.go string.quoted.double.json", // struct tag value
       "settings": {
-        "fontStyle": ""
+        "fontStyle": "italic"
       }
     }
   ]
@@ -103,7 +77,7 @@ You can customize the colors for struct tag keys and values using `editor.tokenC
 
 ### Font color
 
-...
+![custom-font-color](assets/img/custom-font-color.png)
 
 ```json
 "editor.tokenColorCustomizations": {
@@ -111,19 +85,19 @@ You can customize the colors for struct tag keys and values using `editor.tokenC
     {
       "scope": "meta.struct-tag.pair.go support.type.property-name.json", // struct tag key
       "settings": {
-        "foreground": "#FF8800",
+        "foreground": "#9876AA",
       }
     },
     {
       "scope": "meta.struct-tag.pair.go punctuation.separator.dictionary.key-value.json", // struct tag separator (colon)
       "settings": {
-        "foreground": "#00AAFF"
+        "foreground": "#BCBEC4"
       }
     },
     {
       "scope": "meta.struct-tag.pair.go string.quoted.double.json", // struct tag value
       "settings": {
-        "foreground": "#FF00AA",
+        "foreground": "#6A8759",
       }
     }
   ]
@@ -132,7 +106,7 @@ You can customize the colors for struct tag keys and values using `editor.tokenC
 
 ### Font style with color
 
-...
+![custom-font-style-with-color](assets/img/custom-font-style-with-color.png)
 
 ```json
 "editor.tokenColorCustomizations": {
@@ -140,20 +114,20 @@ You can customize the colors for struct tag keys and values using `editor.tokenC
     {
       "scope": "meta.struct-tag.pair.go support.type.property-name.json", // struct tag key
       "settings": {
-        "foreground": "#FF8800",
+        "foreground": "#9876AA",
         "fontStyle": "bold"
       }
     },
     {
       "scope": "meta.struct-tag.pair.go punctuation.separator.dictionary.key-value.json", // struct tag separator (colon)
       "settings": {
-        "foreground": "#00AAFF"
+        "foreground": "#BCBEC4"
       }
     },
     {
       "scope": "meta.struct-tag.pair.go string.quoted.double.json", // struct tag value
       "settings": {
-        "foreground": "#FF00AA",
+        "foreground": "#6A8759",
         "fontStyle": "italic"
       }
     }
