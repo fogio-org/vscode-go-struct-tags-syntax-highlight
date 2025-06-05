@@ -2,6 +2,13 @@
 
 Highlight golang struct tags according to your theme
 
+<p align="center">
+    <a href="https://marketplace.visualstudio.com/items?itemName=fogio.inline-go-struct-tags-syntax-highlight"><img src="https://img.shields.io/visual-studio-marketplace/v/fogio.inline-go-struct-tags-syntax-highlight?style=for-the-badge&colorA=555555&colorB=007ec6&label=VERSION" alt="Version"></a>&nbsp;
+    <a href="https://marketplace.visualstudio.com/items?itemName=fogio.inline-go-struct-tags-syntax-highlight"><img src="https://img.shields.io/visual-studio-marketplace/r/fogio.inline-go-struct-tags-syntax-highlight?style=for-the-badge&colorA=555555&colorB=007ec6&label=RATING" alt="Rating"></a>&nbsp;
+    <a href="https://marketplace.visualstudio.com/items?itemName=fogio.inline-go-struct-tags-syntax-highlight"><img src="https://img.shields.io/visual-studio-marketplace/i/fogio.inline-go-struct-tags-syntax-highlight?style=for-the-badge&colorA=555555&colorB=007ec6&label=Installs" alt="INSTALLS"></a>&nbsp;
+    <a href="https://marketplace.visualstudio.com/items?itemName=fogio.inline-go-struct-tags-syntax-highlight"><img src="https://img.shields.io/visual-studio-marketplace/d/fogio.inline-go-struct-tags-syntax-highlight?style=for-the-badge&colorA=555555&colorB=007ec6&label=Downloads" alt="DOWNLOADS"></a>
+</p>
+
 ## Preview
 
 Your theme's default colors
