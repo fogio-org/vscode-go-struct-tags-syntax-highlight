@@ -13,12 +13,13 @@ Highlight golang struct tags according to your theme
 
 Your theme's default colors
 
-![preview-1](assets/img/preview-1.png)
-![preview-2](assets/img/preview-2.png)
+![preview-1](https://raw.githubusercontent.com/fogio-org/vscode-go-struct-tags-syntax-highlight/master/assets/img/preview-1.png)
+
+![preview-2](https://raw.githubusercontent.com/fogio-org/vscode-go-struct-tags-syntax-highlight/master/assets/img/preview-2.png)
 
 Customization
 
-![preview-3](assets/img/preview-3.png)
+![preview-3](https://raw.githubusercontent.com/fogio-org/vscode-go-struct-tags-syntax-highlight/master/assets/img/preview-3.png)
 
 ## Install
 
@@ -48,7 +49,7 @@ You can customize the colors for struct tag keys and values using `editor.tokenC
 
 ### Font style
 
-![custom-font-style](assets/img/custom-font-style.png)
+![custom-font-style](https://raw.githubusercontent.com/fogio-org/vscode-go-struct-tags-syntax-highlight/master/assets/img/custom-font-style.png)
 
 ```json
 "editor.tokenColorCustomizations": {
@@ -77,7 +78,7 @@ You can customize the colors for struct tag keys and values using `editor.tokenC
 
 ### Font color
 
-![custom-font-color](assets/img/custom-font-color.png)
+![custom-font-color](https://raw.githubusercontent.com/fogio-org/vscode-go-struct-tags-syntax-highlight/master/assets/img/custom-font-color.png)
 
 ```json
 "editor.tokenColorCustomizations": {
@@ -106,7 +107,7 @@ You can customize the colors for struct tag keys and values using `editor.tokenC
 
 ### Font style with color
 
-![custom-font-style-with-color](assets/img/custom-font-style-with-color.png)
+![custom-font-style-with-color](https://raw.githubusercontent.com/fogio-org/vscode-go-struct-tags-syntax-highlight/master/assets/img/custom-font-style-with-color.png)
 
 ```json
 "editor.tokenColorCustomizations": {
