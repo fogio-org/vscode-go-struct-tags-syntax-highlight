@@ -3,7 +3,7 @@
   "displayName": "Inline Go Struct Tags Syntax Highlight",
   "description": "Highlight golang struct tags according to your theme",
   "publisher": "fogio",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "homepage": "https://github.com/fogio-org/vscode-go-struct-tags-syntax-highlight",
   "bugs": {
